@@ -1,4 +1,4 @@
-const API_BASE = "";
+const API_BASE = "https://studytrack-improved.onrender.com";
 
 const rosterList = document.querySelector("#roster-list");
 const studentForm = document.querySelector("#student-form");
