@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyTrack</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>StudyTrack</h1>
+    <p>Unified Full-Stack Study Management Platform</p>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <a href="#roster">Roster</a>
+    <a href="#algorithms">Algorithms</a>
+    <a href="#ai-helper">AI Helper</a>
+  </nav>
+
+  <main>
+    <div id="error-banner" role="alert" hidden></div>
+
+    <section id="roster">
+      <h2>Student Roster</h2>
+
+      <form id="student-form">
+        <input id="name" name="name" type="text" placeholder="Name" required>
+        <input id="email" name="email" type="email" placeholder="Email" required>
+        <input id="age" name="age" type="number" min="1" placeholder="Age" required>
+        <button type="submit">Add Student</button>
+      </form>
+
+      <section id="roster-list" aria-live="polite"></section>
+    </section>
+
+    <section id="algorithms">
+      <h2>Algorithms Engine</h2>
+      <div class="controls">
+        <button id="sort-age" type="button">Sort by Age</button>
+        <button id="sort-name" type="button">Sort by Name</button>
+        <input id="search-name" type="text" placeholder="Exact student name">
+        <button id="search-button" type="button">Binary Search</button>
+        <input id="min-age" type="number" min="1" value="21">
+        <button id="report-button" type="button">Generate Report</button>
+      </div>
+      <pre id="algorithm-output"></pre>
+    </section>
+
+    <section id="ai-helper">
+      <h2>AI Helper</h2>
+
+      <article>
+        <h3>Note Summarizer</h3>
+        <textarea id="notes-input" rows="7"
+          placeholder="Paste your study notes here..."></textarea>
+        <button id="summarize-button" type="button">Summarize Notes</button>
+        <pre id="summary-output"></pre>
+      </article>
+
+      <article>
+        <h3>Semantic Search</h3>
+        <input id="semantic-query" type="text"
+          placeholder="e.g. searching algorithms">
+        <button id="semantic-search-button" type="button">Search Notes</button>
+        <pre id="semantic-output"></pre>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>StudyTrack — Trainee Enablement Demo</p>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

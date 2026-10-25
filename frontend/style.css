@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+header, footer {
+  padding: 20px;
+  text-align: center;
+  background: #111827;
+  color: white;
+}
+
+nav {
+  padding: 12px 20px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin: 20px 0;
+}
+
+#roster-list {
+  margin: 20px 0;
+  padding: 20px;
+  border: 2px solid #9ca3af;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.student-card {
+  margin: 4px;
+  padding: 16px;
+  border: 1px solid #6b7280;
+  border-radius: 8px;
+  background: white;
+}
+
+form, .controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+input, textarea, button {
+  font: inherit;
+}
+
+input, textarea {
+  padding: 8px;
+  border: 1px solid #9ca3af;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 100%;
+}
+
+button {
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+}
+
+button.delete-button {
+  background: #dc2626;
+}
+
+button.save-age-button {
+  background: #059669;
+}
+
+article {
+  padding: 16px;
+  margin: 15px 0;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+}
+
+pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+#error-banner {
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #dc2626;
+  background: #fee2e2;
+  color: #991b1b;
+  border-radius: 5px;
+}
+
+#error-banner[hidden] {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #roster-list {
+    grid-template-columns: 1fr;
+  }
+}
