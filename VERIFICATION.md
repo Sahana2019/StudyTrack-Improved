@@ -41,3 +41,9 @@ Expected current local result:
 ```
 
 The startup seeding logic uses FastAPI's lifespan API, so the test run completes without framework deprecation warnings.
+## Git Workflow
+
+The project was developed using a feature branch and merged into the main branch.
+## Running the Tests
+
+Run `python -m pytest -q` from the project root to execute the automated test suite.
