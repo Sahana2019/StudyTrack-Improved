@@ -30,13 +30,18 @@ async def lifespan(_app: FastAPI):
 
 app = FastAPI(title="StudyTrack API", version="1.0.0", lifespan=lifespan)
 
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5500"],
+    allow_origins=[
+        "http://localhost:5500",
+        "https://studytrack-frontend-0zst.onrender.com",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 
 @app.post("/students/", response_model=schemas.StudentRead, status_code=201)
