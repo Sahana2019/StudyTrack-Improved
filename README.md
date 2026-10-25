@@ -452,3 +452,11 @@ After this update, accurate measurable statements include:
 - Implemented a deterministic 12-dimensional fixed-vocabulary embedding and first-principles cosine similarity with zero-vector handling.
 
 These statements describe work present in the repository and do not claim production deployment, real-LLM API usage, or authentication that was not implemented.
+
+## Project Improvements
+
+- Added automated backend tests
+- Added database indexing for course lookups
+- Added GitHub Actions CI
+- Added isolated test database
+- Added deterministic AI helper with cosine similarity
